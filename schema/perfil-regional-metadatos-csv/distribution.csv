@@ -1,0 +1,68 @@
+"Name","Required","Description","Example","Variable","Type"
+"Identifier","Yes","Unique identifier of the distribution. This identifier must be unique within the catalogue.
+
+The identifier should use lower or upper letter from ""a"" to ""z"" without using special characters (no accents and no ""ñ""), numbers, underscores ""_"", hypens ""-"" and dots ""."".","1.2","identifier","String"
+"Dataset identifier","Yes","Unique identifier of the dataset where this distribution belongs.","""dataset-example-35782”","datasetIdentifier","String"
+"Title","Yes","Name assigned to the distribution.","Contracts open in 2015","title","String"
+"Description","R","Short description of the distribution. It is recommended not writing more than one line. Any other additional information can be included in the description.","List of contracts that were open during 2015 in the System of Electronic Contracts.","description","String"
+"Download URL","Yes","URL that allows direct download of the distribution Links directly to a downloadable file of a certain format.","http://datos.gob.ar/dataset/becaceb2-dbd0-4879-93bd-5f02bd3b8ca2/resource/bf2f67f4-9ab3-479b-a881-56b43565125e/download/contratos-2015.csv","downloadURL","String"
+"Access URL","Yes","URL that allows access to the distribution, through a web site, feed or other resource giving indirect access to the resource. If distributions are only accessible through the landing page of the dataset, this metadata field must be completed with the same value as the dataset landing page.","http://datos.gob.ar/dataset/sistema-de-contrataciones-electronicas-argentina-compra/archivo/fa3603b3-0af7-43cc-9da9-90a512217d8a","accessURL","String"
+"Fields of the distribution","R","List of fields that a tabular distribution contains (it doesn't apply to non tabular distributions) and its metadata. Each field is represente by an object (""{}"") where metadata of the Field class are specified.","[{...}, {...}]","field","Array"
+"Date of creation or publication","Yes","Date of creation or publication of the distribution or resource. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","issued","String"
+"Date of last modification or update of data or metadata","R","Date of last modification or update of any data or metadata in the distribution or resource. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","modified","String"
+"Date of last modification or update of data","R","Date of last modification or update of any data in the distribution or resource. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","dataModified","String"
+"Date of last modification or update of metadata","R","Date of last modification or update of any metadata in the distribution or resource. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","metadataModified","String"
+"File format","R","Indicates the format of the file. If the type is defined by IANA (http://www.iana.org/assignments/media-types/media-types.xml), this definition can be used. In other case, the file extension (after the dot ""."" in the file name) should be used.","""text/csv"" IANA definition
+
+""csv"" file extension","format","String"
+"License","R","License under wich this distribution is available to use. This should be a link to the selected license defined in the web or the specific strings that acts as a title as it appears in the Open Definition list of licenses (https://licenses.opendefinition.org/).
+
+It is recommended using ""Creative Commons 4.0"" as it covers data and contents, and is available in English and Spanish. If the license was specified at the level of dataset, it is not neccessary to use this field unless a different license applies.","""https://creativecommons.org/licenses/by/4.0/"" if using a link
+
+""Creative Commons 4.0"" if using the name of the license","license","String"
+"File type","No","Indicates the type of file of the distribution, only if this one is defined by IANA (http://www.iana.org/assignments/media-types/media-types.xml). If not defined, this field should remain empty.","""text/csv"" IANA definition
+
+"""" when there is no IANA definition","mediaType","String"
+"Resource type","R","Indicates the type of resource.
+
++ ""Data file"" (file): physical file of a certain format that can be downloaded.
++ ""API"" (api): api web documentation URL, of data web service.
++ ""Code"" (code): scripting file or repository used for the generation, transformation, cleaning or validation of all or part of the data contained in the dataset.
++ ""Documentation"" (documentation): methodological documentation of all or part of the data in this dataset.","""file""","type","String"
+"Spatial coverage","No","Is the spatial area covered by the distribution. This can be expressed using very different standards. It is recommended to develop a guide of territorial and administrative units specific to the country that manages the catalogue, where official codes are used to express spatial coverage.
+
+A certain region or place. Can have different values:
+
+a) of countries, provinces, departments, counties, municipalities or cities, under the recommendations of the guide of territorial and administrative units of the country that is managing the catalogue.
+b) an area of coordinates (or bounding box) represented by latitude / longitude in this order: minimum longitude, minimum latitude, maximum longitude, maximum latitude.
+c) a geographical point represented by latitude / longitude.
+d) if the geographical reference is not included in the official guide of territorial and administrative units of the country, can be referenced using a geonames URI from geonames.org as: http://sws.geonames.org/6255146","""ARG"" is the code for Argentina.
+
+""06007"" is the official code of a ""department"" in Argentina
+
+[-58.111111, -35.111111, -57.111111, -33.111111] it's a bounding box
+
+[-58.111111, -35.111111] it's a geographical point
+
+""http://sws.geonames.org/6255146""","spatial","String"
+"Temporal coverage","No","Time period covered by the distribution.
+
+The time period has an initial date and an end date, separated by ""/"", written in ISO 8601 format using only date part or date & time depending on the precission needed. Optionally, a single date can be specified (instead of two) and this one will be interpreted as an initial date, while the end date will remain unspecified (useful for datasets that are chronologically updated).","2015-01-01/2015-12-31
+
+2015-01-01T00:45:00Z/2016-01-15T00:06:00Z
+
+2015-01-01
+
+2015-01-01T00:45:00Z","temporal","String"
+"Additional rights or terms and conditions of the distribution","No","Information about additional rights or terms or conditions applyable to the distribution, in case they are not covered by the license or the addictional rights specified for the catalog don't apply.","","rights","String"
+"Size","No","Size of the file in bytes. Can be approximate if exact size is not known.","Example for a 5kb file: ”5120”","byteSize","Integer"
+"Standard codes","No","Names of standard codes, nomenclators or classifiers used ni the distribution.","ISO 8601","codelists","String"
+"Standard codes documentation URLs","No","Links to official sources of the codes and standards used.","https://www.w3.org/TR/NOTE-datetime","codelistlink","String"

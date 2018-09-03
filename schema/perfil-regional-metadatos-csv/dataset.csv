@@ -1,0 +1,82 @@
+"Name","Required","Description","Example","Variable","Type"
+"Identifier","Yes","Unique identifier of the dataset. This identifier has to be unique inside the whole catalogue.","""dataset-example-35782”","identifier","String"
+"Title","Yes","Name assigned to the dataset as it will be published.
+
+It must be clear, precise but general enough to include the distributions it contains. It is recommended not to exceed 100 characters, in most cases.","System of Electronic Contracts","title","String"
+"Description","Yes","Descriptions of the contents of the datasets, in a clear and precise way.
+
+It is recommended not to exceed 500 characters, in most cases.","Data about the System of Electronic Contracts (""Argentine Buys"")","description","String"
+"Author","Yes","Authority responsible of dataset publication.
+
+It is recommended the adoption of a controlled vocabulary of the organizations of the country or national administration in charge of the catalogue. Also a way of expressing hiearchy should be defined (ie.: using dots or ""-"" to separate hierarchical levels, express them ascending or descending way, etc.)","Ministry of Modernization. Secretary of Administrative Modernization. National Office of Contracts.","publisher -> name","String"
+"Author e-mail","R","Responsibile authority of dataset publication e-mail.","onc@modernizacion.gob.ar","publisher -> mbox","String"
+"Point of contact","R","Area or person acting as a point of contact that can bring relevant information of the dataset to a user. This should be te closest point of contact to the operation and maintainment of the dataset.","Ministerio de Modernización. Secretaría de Modernización Administrativa. Oficina Nacional de Contrataciones. Dirección de Compras Electrónicas.","contactPoint -> fn","String"
+"Point of contact e-mail","R","E-mail of the area or person acting as a point of contact that can bring relevant information of the dataset to a user.","onc-compraselectronicas@modernizacion.gob.ar","contactPoint -> hasEmail","String"
+"Primary or original source","No","Original or primary sources of data published in the dataset. It should be used when the publisher authority of the dataset it is not the one producing the data originally.","Ministerio de Hacienda. Instituto Nacional de Estadísticas y Censos. Dirección Nacional de Cuentas Nacionales.","attribution","String"
+"Collaborators","No","Entities, organizations or additional persons that are or were responsible of collecting, creating or contributing in any way in developing the data asset. Values should be separated by commas "","".","Argentine Institute for Fiscal Analysis","contributor","String"
+"Distributions","Yes","List of distributions contained in the dataset and their metadata. Each distribution is an object (""{}"") where its metadata is described following ""Distribution"" class metadata fields.","[{...}, {...}]","distribution","Array"
+"Themes","R","Theme/s or categories of which this dataset has data about.
+
+A dataset can be classified with one or multiple themes, so this metadata field is a list of themes or categories. The available list of themes to use here is the theme taxonomy defined by the authority behind the catalogue. The ids of the themes must be used here (see ""id"" of Theme class). Labels and descriptions of the themes, must not be used.","[""gove"", ""econ""]","theme","Array"
+"Date of creation or publication","Yes","Date of creation or publication of the dataset. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","issued","String"
+"Date of last modification or update of data or metadata","R","Date of last modification or update of any data or metadata in the dataset. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","modified","String"
+"Date of last modification or update of data","R","Date of last modification or update of any data in the dataset. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","dataModified","String"
+"Date of last modification or update of metadata","R","Date of last modification or update of any metadata in the dataset. It's written following ISO-8601 format, using either the complete forme (date and time) or only the date part.","""2016-04-14T19:48:05.433640"" specifies date and time
+
+""2016-04-14"" specifies date only","metadataModified","String"
+"Updating frequency","Yes","Frequency in which responsibles update the dataset.
+
+It is recommended to use normalized periods following ISO-8601 format, adding the value “eventual” for datasets that are updated in a non regular basis. See annex ""Frequencies specification under ISO-8601"".","“R/P1Y” for datasets yearly updated","accrualPeriodicity","String"
+"Landing page","R","URL of the webpage where dataset, its resources, reports or any additional information of it can be accessed.","http://datos.gob.ar/dataset/sistema-de-contrataciones-electronicas-argentina-compra","landingPage","String"
+"Tags","R","Words describing title or content of the resource.
+
+It is neccesary that tags are well written, in plural and keeping an eye of previous tags. Tags are useful por users search. The longer and homogeneous is the list of tags, their efficiency will be better. See annex of “Guidelines for tags selection”.","[""goods"", ""contracts"", ""services""]","keyword","Array"
+"Temporal coverage","R","Time period covered by the dataset.
+
+The time period has an initial date and an end date, separated by ""/"", written in ISO 8601 format using only date part or date & time depending on the precission needed. Optionally, a single date can be specified (instead of two) and this one will be interpreted as an initial date, while the end date will remain unspecified (useful for datasets that are chronologically updated).","2015-01-01/2015-12-31
+
+2015-01-01T00:45:00Z/2016-01-15T00:06:00Z
+
+2015-01-01
+
+2015-01-01T00:45:00Z","temporal","String"
+"License","R","License under wich this dataset and its distributions are available to use. This should be a link to the selected license defined in the web or the specific strings that acts as a title as it appears in the Open Definition list of licenses (https://licenses.opendefinition.org/).
+
+It is recommended using ""Creative Commons 4.0"" as it covers data and contents, and is available in English and Spanish. A distribution specifying a different license, overwrites the license of this dataset.","""https://creativecommons.org/licenses/by/4.0/"" if using a link
+
+""Creative Commons 4.0"" if using the name of the license","license","String"
+"Languages","No","Language(s) for metadata in this dataset. There are 2 ISO standards that can be used in this field:
+
+(a) ISO 639-1 (2 letters as ""en"" or ""es"")
+(b) ISO 639-2/T (3 letters as ""eng"" or ""esp"" - this is the most recommended one)
+
+1 or more languages can be defined in the list. (Link to ISO standards: https://www.loc.gov/standards/iso639-2/php/code_list.php)","[""es""] for a language in ISO 639-1
+
+[""spa"", ”eng""] for two languages in ISO 639-2","language","Array"
+"Spatial coverage","No","Is the spatial area covered by the dataset. This can be expressed using very different standards. It is recommended to develop a guide of territorial and administrative units specific to the country that manages the catalogue, where official codes are used to express spatial coverage.
+
+A certain region or place. Can have different values:
+
+a) of countries, provinces, departments, counties, municipalities or cities, under the recommendations of the guide of territorial and administrative units of the country that is managing the catalogue.
+b) an area of coordinates (or bounding box) represented by latitude / longitude in this order: minimum longitude, minimum latitude, maximum longitude, maximum latitude.
+c) a geographical point represented by latitude / longitude.
+d) if the geographical reference is not included in the official guide of territorial and administrative units of the country, can be referenced using a geonames URI from geonames.org as: http://sws.geonames.org/6255146","""ARG"" is the code for Argentina.
+
+""06007"" is the official code of a ""department"" in Argentina
+
+[-58.111111, -35.111111, -57.111111, -33.111111] it's a bounding box
+
+[-58.111111, -35.111111] it's a geographical point
+
+""http://sws.geonames.org/6255146""","spatial","Array or String"
+"Hierarchy, order or jurisdictional level","No","Classifies a dataset by hierarchy, order or jurisdictional level. Indicates type and scope of legal jurisdiction behind dataset publication.
+
+Values of this metadata can be ""national"" or ""territorial"" (covering national level as one case, and all sub-national levels as the other case), or belong to an alternative controlled vocabulary defined by the country or organization responsible for the open data policy (ie.: ""federal"", ""provincial"" o ""municipal"").","""national""
+
+""territorial""","jurisdiction","String"
