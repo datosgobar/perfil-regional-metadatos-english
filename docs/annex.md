@@ -1,22 +1,22 @@
-Anexos
+Annex
 ===
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
  
 
-- [Anexo I - Taxonomía temática (tabla)](#anexo-i-taxonomia-tematica-tabla)
-- [Anexo II - Taxonomía temática (JSON)](#anexo-ii-taxonomia-tematica-json)
-- [Anexo III - Pautas para la selección de etiquetas](#anexo-iii-pautas-para-la-seleccion-de-etiquetas)
-- [Anexo IV - Especificación de frecuencias (según ISO-8601)](#anexo-iv-especificacion-de-frecuencias-segun-iso-8601)
+- [Annex I - Theme taxonomy (table)](#Annex-i-taxonomia-tematica-tabla)
+- [Annex II - Theme taxonomy (JSON)](#Annex-ii-taxonomia-tematica-json)
+- [Annex III - Guidelines for tags selection](#Annex-iii-pautas-para-la-seleccion-de-etiquetas)
+- [Annex IV - Frequency specification (ISO-8601)](#Annex-iv-especificacion-de-frecuencias-segun-iso-8601)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Anexo I - Taxonomía temática (tabla)
+## Annex I - Theme taxonomy (tabla)
 
-El Perfil Regional de Metadatos propone el uso de la [taxonomía temática definida por la Unión Europea](http://publications.europa.eu/mdr/authority/data-theme/index.html) para la mayoría de los casos.
+The Regional Metadata Profile recommends using the [theme taxonomy defined by European Union](http://publications.europa.eu/mdr/authority/data-theme/index.html) for most cases.
 
-Esta taxonomía está formada por 13 temas generales, bajo los cuales cualquier activo de datos puede ser clasificado. Sin embargo **algunos países podrían querer desarrollar una taxonomía temática más detallada**, con temas más específicos.
+This taxonomy has 13 general themes, under which any data asset can be classified. Nevertheless, **some countries may want to develop a more detailed theme taxonomy**, with more specific topics.
 
 <table>
   <colgroup>
@@ -26,9 +26,9 @@ Esta taxonomía está formada por 13 temas generales, bajo los cuales cualquier 
   </colgroup>
   <tbody>
     <tr>
-      <td>Código (authority code)</td>
-      <td>Etiqueta (label)</td>
-      <td>Descripción (description)</td>
+      <td>Code</td>
+      <td>Label</td>
+      <td>Description</td>
     </tr>
     <tr>
       <td>AGRI</td>
@@ -98,9 +98,9 @@ Esta taxonomía está formada por 13 temas generales, bajo los cuales cualquier 
     </tbody>
 </table>
 
-## Anexo II - Taxonomía temática (JSON)
+## Annex II - Theme taxonomy (JSON)
 
-Esta es la [taxonomía temática de la Unión Europea](https://raw.githubusercontent.com/datosgobar/perfil-regional-metadatos/master/standards/themeTaxonomy.json) en formato JSON:
+This is the [Theme taxonomy of European Union](https://raw.githubusercontent.com/datosgobar/perfil-regional-metadatos/master/standards/themeTaxonomy.json) in JSON format:
 
 ```json
 [
@@ -172,115 +172,115 @@ Esta es la [taxonomía temática de la Unión Europea](https://raw.githubusercon
 ]
 ```
 
-## Anexo III - Pautas para la selección de etiquetas
+## Annex III - Guidelines for tags selection
 
-Elegir buenas etiquetas hace más fácil la búsqueda de datasets para los usuarios. Cuanto más amplia y uniforme sea la lista de etiquetas, mayor será su efectividad.
+Choosing good labels make is it easier for user to search for data assets. The larger and homogeneous is the tag list, the more effective will be.
 
-Estas son pautas para definir etiquetas aplicables a la propiedad *keyword* de la clase dataset:
+These guidelines apply to define labels used in the *keyword* metadata of the Dataset class:
 
-* Escribir correctamente y en plural.
+* Writing correctly and in plural.
 
-* Usar mayúsculas sólo donde corresponda.
+* Use upper case only where is necessary.
 
-* Identificar palabras claves.
+* Identify key words.
 
-* Respetar la existencia de etiquetas anteriores.
+* Re-use previous labels, rather than creating similar new ones.
 
-* Agregar sinónimos y emplear lenguaje natural.
+* Add different sinonims and use natural language.
 
-* Usar una sóla palabra. Si es muy necesario, usar más de una. 
+* Use only one word. Only use more words if really necessary.
 
-* Si la etiqueta tiene más de una palabra, debe estar separada por un espacio, ej: "declaraciones juradas".
+* If the tag has more than one word, should be space separated as in: "legal declarations".
 
-Preguntas útiles a la hora de pensar los etiquetas:
+Useful questions to think about tags:
 
-* ¿Cuál es el tema?
+* ¿What is the topic?
 
-* ¿Qué aspectos serán de interés para los usuarios?
+* ¿What aspects of the data asset will be interesting for users?
 
-* ¿De qué otro modo buscaría sobre esta información?
+* ¿In what different ways users will look for this information?
 
-* ¿De qué tipo de información se trata?
+* ¿What kind of information is this about?
 
-* ¿Qué área la provee?
+* ¿What organization provide this data?
 
-## Anexo IV - Especificación de frecuencias (según ISO-8601)
+## Annex IV - Frequency specification (ISO-8601)
 
 <table>
   <tr>
-    <td>Frecuencia</td>
-    <td>Valor según ISO-8601</td>
+    <td>Frequency</td>
+    <td>Value under ISO-8601</td>
   </tr>
   <tr>
-    <td>Cada diez años</td>
+    <td>Every ten years</td>
     <td>R/P10Y</td>
   </tr>
   <tr>
-    <td>Cada cuatro años</td>
+    <td>Every four years</td>
     <td>R/P4Y</td>
   </tr>
   <tr>
-    <td>Cada tres años</td>
+    <td>Every three years</td>
     <td>R/P3Y</td>
   </tr>
   <tr>
-    <td>Cada dos años</td>
+    <td>Every two years</td>
     <td>R/P2Y</td>
   </tr>
   <tr>
-    <td>Anualmente</td>
+    <td>Yearly</td>
     <td>R/P1Y</td>
   </tr>
   <tr>
-    <td>Cada medio año</td>
+    <td>Every half year</td>
     <td>R/P6M</td>
   </tr>
   <tr>
-    <td>Cuatrimestralmente</td>
+    <td>Every four years</td>
     <td>R/P4M</td>
   </tr>
   <tr>
-    <td>Trimestralmente</td>
+    <td>Quarterly</td>
     <td>R/P3M</td>
   </tr>
   <tr>
-    <td>Bimestralmente</td>
+    <td>Every two years</td>
     <td>R/P2M</td>
   </tr>
   <tr>
-    <td>Mensualmente</td>
+    <td>Monthly</td>
     <td>R/P1M</td>
   </tr>
   <tr>
-    <td>Cada 15 días</td>
+    <td>Every 15 days</td>
     <td>R/P0.5M</td>
   </tr>
   <tr>
-    <td>Tres veces por mes</td>
+    <td>Three times per month</td>
     <td>R/P0.33M</td>
   </tr>
   <tr>
-    <td>Semanalmente</td>
+    <td>Weekly</td>
     <td>R/P1W</td>
   </tr>
   <tr>
-    <td>Dos veces a la semana</td>
+    <td>Two times per week</td>
     <td>R/P0.5W</td>
   </tr>
   <tr>
-    <td>Tres veces a la semana</td>
+    <td>Three times per week</td>
     <td>R/P0.33W</td>
   </tr>
   <tr>
-    <td>Diariamente</td>
+    <td>Daily</td>
     <td>R/P1D</td>
   </tr>
   <tr>
-    <td>Cada hora</td>
+    <td>Every hour</td>
     <td>R/PT1H</td>
   </tr>
   <tr>
-    <td>Continuamente actualizado</td>
+    <td>Continuously updated</td>
     <td>R/PT1S</td>
   </tr>
   <tr>

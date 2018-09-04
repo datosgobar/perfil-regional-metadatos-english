@@ -5,7 +5,7 @@ Regional Metadata Profile
 
 The Regional Metadata Profile (RMP) is an initiative of the Open Data Group of the Organization of American States (OAS).
 
-With this metadata profile, the group aims to build a common baseline between countries of the region that can be a reference and ease initiatives that need to implement open data catalogues, re-using common solutions.
+With this metadata profile, the group aims to build a common baseline between countries of the region that can be a reference and ease initiatives that need to implement open data catalogs, re-using common solutions.
 
 # Design principles
 
@@ -17,7 +17,7 @@ The RMP was designed following these principles:
 
 Following this 3 principles as guidelines, the Regional Metadata Profile:
 
-* **It is based on european application of DCAT (DCAT-AP)**. Takes the metadata profile for implementing open data catalogues more broadly used as a baseline, and extends it.
+* **It is based on european application of DCAT (DCAT-AP)**. Takes the metadata profile for implementing open data catalogs more broadly used as a baseline, and extends it.
 * **Follows same extensibility philosophy than DCAT**
     - Preserves the use of all mandatory fields.
     - If a non mandatory field is defined in the baseline, it is preferable using that one before creating a new one.
